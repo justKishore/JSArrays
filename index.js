@@ -50,25 +50,39 @@ console.log(players); // op: (7) ['Ronaldo', 'Messi', 'Neymar', 'Hazard', 'Kroo
 
 // 7.2 Add elements by replacing 
 players.splice(3,2,"Pogba","Rashford"); // Replace Hazard and Kroos with Pogba and Rashford respectively
-console.log(players); //op: (7) ['Ronaldo', 'Messi', 'Neymar', 'Pogba', 'Rashford', empty, 'Bruno']
+console.log(players); // op: (7) ['Ronaldo', 'Messi', 'Neymar', 'Pogba', 'Rashford', empty, 'Bruno']
 
 // 7.3 Remove elements using splice
 players.splice(5,1); // Remove empty at index 5
-console.log(players); //op: (6) ['Ronaldo', 'Messi', 'Neymar', 'Pogba', 'Rashford', 'Bruno']
+console.log(players); // op: (6) ['Ronaldo', 'Messi', 'Neymar', 'Pogba', 'Rashford', 'Bruno']
 
 // 8. Concat
 const city = ['Madrid','Barcelona','Pari','Turin','Manchester','Lisbon'];
 const playerCity = players.concat(city);
-console.log("Players: "+players); //op: Players: Ronaldo,Messi,Neymar,Pogba,Rashford,Bruno
-console.log("City: "+city); //op: City: Madrid,Barcelona,Pari,Turin,Manchester,Lisbon
+console.log("Players: "+players); // op: Players: Ronaldo,Messi,Neymar,Pogba,Rashford,Bruno
+console.log("City: "+city); // op: City: Madrid,Barcelona,Pari,Turin,Manchester,Lisbon
 console.log("Players + city: "+playerCity); //op: Players + city: Ronaldo,Messi,Neymar,Pogba,Rashford,Bruno,Madrid,Barcelona,Pari,Turin,Manchester,Lisbon
 
-//9. Slice
+// 9. Slice
 const goats = players.slice(0,2);
-console.log("Goats: "+goats); //op: Goats: Ronaldo,Messi
+console.log("Goats: "+goats); // op: Goats: Ronaldo,Messi
 
-//10. Convert to string
+// 10. Convert to string
 var playersString = players.toString();
-console.log(players); //op: (6) ['Ronaldo', 'Messi', 'Neymar', 'Pogba', 'Rashford', 'Bruno']
+console.log(players); // op: (6) ['Ronaldo', 'Messi', 'Neymar', 'Pogba', 'Rashford', 'Bruno']
 console.log("Players in string: "+playersString); //op: Players in string: Ronaldo,Messi,Neymar,Pogba,Rashford,Bruno
 
+// 11. Sort
+players.sort();
+console.log(players); // op: (6) ['Bruno', 'Messi', 'Neymar', 'Pogba', 'Rashford', 'Ronaldo']
+
+// 12. Reverse
+players.reverse();
+console.log(players) // op: (6) ['Ronaldo', 'Rashford', 'Pogba', 'Neymar', 'Messi', 'Bruno']
+
+// 13. Numeric Sort
+
+// 14. Max and Min
+const numbers = [1,2,10,25];
+console.log("Maximum: "+Math.max.apply(null,numbers)); // op: Maximum: 25
+console.log("Minimum: "+Math.min.apply(null,numbers)); // op: Minimum: 1
